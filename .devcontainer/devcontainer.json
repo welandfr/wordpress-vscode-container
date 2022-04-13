@@ -1,5 +1,5 @@
 {
-	"name": "WordPress Plugin Boilerplate",
+	"name": "WordPress Local Dev",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "wordpress",
 	"workspaceFolder": "/workspace",
@@ -23,9 +23,13 @@
 
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
+		"mtxr.sqltools",
 		"felixfbecker.php-debug",
 		"felixfbecker.php-intellisense",
 		"ikappas.composer",
-		"ikappas.phpcs"
-	]
+		"ikappas.phpcs",
+		"mtxr.sqltools-driver-mysql"
+	],
+
+	"postStartCommand": "sudo chmod -R g+w /workspace/wordpress && sudo chgrp -R vscode /workspace/wordpress && alias ll='ls -lha'" 
 }

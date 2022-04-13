@@ -1,4 +1,19 @@
 {
     "composer.executablePath": "/usr/local/bin/composer",
-    "phpcs.standard": "WordPress"
+    "phpcs.standard": "WordPress",
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "db",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "wordpress",
+            "database": "wordpress",
+            "username": "wordyuser",
+            "password": "wordypass"
+        }
+    ]
 }

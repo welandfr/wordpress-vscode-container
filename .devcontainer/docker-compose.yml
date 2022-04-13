@@ -7,7 +7,7 @@ services:
     networks: 
       - devnet
     environment:
-      MYSQL_DATABASE: wordydb
+      MYSQL_DATABASE: wordpress
       MYSQL_USER: wordyuser
       MYSQL_PASSWORD: wordypass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
@@ -28,7 +28,7 @@ services:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordyuser
       WORDPRESS_DB_PASSWORD: wordypass
-      WORDPRESS_DB_NAME: wordydb
+      WORDPRESS_DB_NAME: wordpress
 
 networks: 
   devnet:
